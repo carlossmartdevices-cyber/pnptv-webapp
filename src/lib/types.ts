@@ -28,3 +28,24 @@ export interface LiveEvent {
   eventDate: Date;
   createdAt: Date;
 }
+
+export interface Message {
+    id: string;
+    author: User;
+    content: string;
+    createdAt: Date;
+}
+
+export interface Channel {
+    id: string;
+    name: string;
+    type: 'text' | 'voice';
+    messages: Message[];
+}
+
+export interface Space {
+    id: string;
+    name: string;
+    description: string;
+    channels: Channel[];
+}

@@ -1,4 +1,4 @@
-import type { User, Post, LiveEvent } from './types';
+import type { User, Post, LiveEvent, Space } from './types';
 
 export const mockUsers: User[] = [
   {
@@ -96,4 +96,75 @@ export const mockLiveEvents: LiveEvent[] = [
     eventDate: new Date(Date.now() + 1000 * 60 * 60 * 24 * 7), // In 1 week
     createdAt: new Date(Date.now() - 1000 * 60 * 60 * 48),
   },
+];
+
+export const mockSpaces: Space[] = [
+    {
+        id: 'space-1',
+        name: 'General',
+        description: 'A place for general chatter and community announcements.',
+        channels: [
+            {
+                id: 'channel-1-1',
+                name: 'general-chat',
+                type: 'text',
+                messages: [
+                    { id: 'msg-1', author: mockUsers[2], content: 'Welcome everyone!', createdAt: new Date(Date.now() - 1000 * 60 * 60) },
+                    { id: 'msg-2', author: mockUsers[3], content: 'Hey there! Glad to be here.', createdAt: new Date(Date.now() - 1000 * 60 * 55) },
+                ]
+            },
+            {
+                id: 'channel-1-2',
+                name: 'lounge',
+                type: 'voice',
+                messages: []
+            }
+        ]
+    },
+    {
+        id: 'space-2',
+        name: 'Performers Corner',
+        description: 'A space for performers to collaborate, share tips, and plan events.',
+        channels: [
+            {
+                id: 'channel-2-1',
+                name: 'performance-feedback',
+                type: 'text',
+                messages: [
+                     { id: 'msg-3', author: mockUsers[1], content: 'Anyone have tips for stage fright?', createdAt: new Date(Date.now() - 1000 * 60 * 120) },
+                ]
+            },
+            {
+                id: 'channel-2-2',
+                name: 'collaboration-station',
+                type: 'voice',
+                messages: []
+            }
+        ]
+    },
+     {
+        id: 'space-3',
+        name: 'Content Creation',
+        description: 'Discuss gear, software, and techniques for creating amazing content.',
+        channels: [
+            {
+                id: 'channel-3-1',
+                name: 'video-editing',
+                type: 'text',
+                messages: []
+            },
+            {
+                id: 'channel-3-2',
+                name: 'audio-production',
+                type: 'text',
+                messages: []
+            },
+             {
+                id: 'channel-3-3',
+                name: 'live-jam',
+                type: 'voice',
+                messages: []
+            }
+        ]
+    }
 ];

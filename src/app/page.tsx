@@ -8,6 +8,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import WhatsNew from '@/components/views/whats-new';
 import LiveEvents from '@/components/views/live';
 import Performers from '@/components/views/performers';
+import Spaces from '@/components/views/spaces';
 import { PnpTvAppIcon } from '@/components/icons';
 
 export default function Home() {
@@ -30,10 +31,11 @@ export default function Home() {
     <MainLayout>
       <div className="flex-1 p-4 md:p-8 pt-6">
         <Tabs defaultValue="whats-new" className="w-full">
-          <TabsList className="grid w-full grid-cols-3 max-w-2xl mx-auto mb-6 bg-secondary">
+          <TabsList className="grid w-full grid-cols-4 max-w-2xl mx-auto mb-6 bg-secondary">
             <TabsTrigger value="whats-new">What's New</TabsTrigger>
             <TabsTrigger value="live">Live</TabsTrigger>
             <TabsTrigger value="performers">Performers</TabsTrigger>
+            <TabsTrigger value="spaces">Spaces</TabsTrigger>
           </TabsList>
           <TabsContent value="whats-new">
             <WhatsNew />
@@ -43,6 +45,9 @@ export default function Home() {
           </TabsContent>
           <TabsContent value="performers">
             <Performers />
+          </TabsContent>
+           <TabsContent value="spaces">
+            <Spaces />
           </TabsContent>
         </Tabs>
       </div>

@@ -10,6 +10,7 @@ import {
   Gem,
   User as UserIcon,
   Users,
+  MessageSquare,
 } from 'lucide-react';
 import { useAuth } from '@/hooks/use-auth';
 import {
@@ -70,6 +71,12 @@ export function UserNav() {
              <Link href="/community">
               <Users />
               <span>Community</span>
+            </Link>
+          </DropdownMenuItem>
+          <DropdownMenuItem asChild>
+             <Link href="/#spaces">
+              <MessageSquare />
+              <span>Spaces</span>
             </Link>
           </DropdownMenuItem>
           {user.isPerformer && (
