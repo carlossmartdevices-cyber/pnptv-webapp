@@ -17,6 +17,7 @@ export const PnpTvAppIcon = (props: SVGProps<SVGSVGElement>) => (
         <stop offset="100%" style={{ stopColor: 'hsl(var(--accent))', stopOpacity: 1 }} />
       </linearGradient>
     </defs>
-    <path d="M12 2L22 12L12 22L2 12L12 2Z" fill="url(#icon-gradient)" stroke="url(#icon-gradient)" />
+    <path d="M12 2L2 7l10 15L22 7l-10-5z" fill="url(#icon-gradient)" stroke="url(#icon-gradient)" />
+    <path d="M2 7l10 15V7L2 7z" fill="url(#icon-gradient)" stroke="url(#icon-gradient)" />
   </svg>
 );
