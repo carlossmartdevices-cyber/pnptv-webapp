@@ -15,6 +15,8 @@ export interface Post {
   id: string;
   author: User;
   content: string;
+  imageUrl?: string;
+  videoUrl?: string;
   createdAt: Date;
 }
 

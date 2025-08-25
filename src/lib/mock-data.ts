@@ -62,6 +62,7 @@ export const mockPosts: Post[] = [
     id: 'post-1',
     author: mockUsers[1],
     content: 'Excited to announce my new track "Electric Dreams" is dropping next week! 🚀 #newmusic',
+    imageUrl: 'https://placehold.co/1200x600/9400D3/FFFFFF.png?text=Electric+Dreams',
     createdAt: new Date(Date.now() - 1000 * 60 * 30), // 30 mins ago
   },
   {
