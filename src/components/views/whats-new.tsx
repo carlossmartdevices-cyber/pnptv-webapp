@@ -8,11 +8,78 @@ import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card'
 import { Textarea } from '@/components/ui/textarea';
 import { useAuth } from '@/hooks/use-auth';
 import { mockPosts } from '@/lib/mock-data';
-import type { Post } from '@/lib/types';
+import type { Post, Comment } from '@/lib/types';
 import { formatDistanceToNow } from 'date-fns';
-import { Send, Image as ImageIcon, Film, X } from 'lucide-react';
+import { Send, Image as ImageIcon, Film, X, MessageSquare } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import { Separator } from '../ui/separator';
+import { Input } from '../ui/input';
 
+const MAX_IMAGE_SIZE_MB = 5;
+const MAX_VIDEO_SIZE_MB = 50;
+
+const CommentSection = ({ post, onCommentAdded }: { post: Post; onCommentAdded: (postId: string, newComment: Comment) => void; }) => {
+  const { user } = useAuth();
+  const [newComment, setNewComment] = useState('');
+  
+  const handleAddComment = () => {
+    if (!newComment.trim() || !user) return;
+    const comment: Comment = {
+      id: `comment-${Date.now()}`,
+      author: user,
+      content: newComment,
+      createdAt: new Date(),
+    };
+    onCommentAdded(post.id, comment);
+    setNewComment('');
+  };
+
+  const getInitials = (name: string | null | undefined) => {
+    if (!name) return 'U';
+    const names = name.split(' ');
+    if (names.length > 1) {
+      return names[0][0] + names[1][0];
+    }
+    return name[0];
+  };
+  
+  return (
+    <div className="pt-4 space-y-4">
+      <Separator />
+       {post.comments.map((comment) => (
+        <div key={comment.id} className="flex items-start gap-3">
+          <Avatar className="h-8 w-8">
+            <AvatarImage src={comment.author.photoURL ?? ''} />
+            <AvatarFallback>{getInitials(comment.author.displayName)}</AvatarFallback>
+          </Avatar>
+          <div className="bg-secondary rounded-lg p-2 text-sm w-full">
+            <div className="flex items-baseline gap-2">
+              <p className="font-semibold text-xs">{comment.author.displayName}</p>
+              <p className="text-xs text-muted-foreground">{formatDistanceToNow(comment.createdAt, { addSuffix: true })}</p>
+            </div>
+            <p>{comment.content}</p>
+          </div>
+        </div>
+      ))}
+      <div className="flex items-center gap-2 pt-2">
+        <Avatar className="h-8 w-8">
+            <AvatarImage src={user?.photoURL ?? ''} />
+            <AvatarFallback>{getInitials(user?.displayName)}</AvatarFallback>
+        </Avatar>
+        <Input
+          placeholder="Write a comment..."
+          value={newComment}
+          onChange={(e) => setNewComment(e.target.value)}
+          onKeyDown={(e) => { if (e.key === 'Enter') handleAddComment(); }}
+          className="h-9"
+        />
+        <Button size="sm" onClick={handleAddComment} disabled={!newComment.trim()}>
+          <Send />
+        </Button>
+      </div>
+    </div>
+  )
+}
 
 export default function WhatsNew() {
   const { user } = useAuth();
@@ -28,13 +95,25 @@ export default function WhatsNew() {
   const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>, type: 'image' | 'video') => {
     const file = event.target.files?.[0];
     if (file) {
-      if ((type === 'image' && !file.type.startsWith('image/')) || (type === 'video' && !file.type.startsWith('video/'))) {
-        toast({
-          variant: "destructive",
-          title: "Invalid File Type",
-          description: `Please select a valid ${type} file.`,
-        });
-        return;
+      const fileSizeMB = file.size / 1024 / 1024;
+      if (type === 'image') {
+        if (!file.type.startsWith('image/')) {
+            toast({ variant: "destructive", title: "Invalid File Type", description: "Please select an image file." });
+            return;
+        }
+        if (fileSizeMB > MAX_IMAGE_SIZE_MB) {
+            toast({ variant: "destructive", title: "Image Too Large", description: `Please select an image smaller than ${MAX_IMAGE_SIZE_MB}MB.` });
+            return;
+        }
+      } else if (type === 'video') {
+         if (!file.type.startsWith('video/')) {
+            toast({ variant: "destructive", title: "Invalid File Type", description: "Please select a video file." });
+            return;
+        }
+        if (fileSizeMB > MAX_VIDEO_SIZE_MB) {
+            toast({ variant: "destructive", title: "Video Too Large", description: `Please select a video smaller than ${MAX_VIDEO_SIZE_MB}MB.` });
+            return;
+        }
       }
 
       const reader = new FileReader();
@@ -60,6 +139,7 @@ export default function WhatsNew() {
       author: user,
       content: newPostContent,
       createdAt: new Date(),
+      comments: [],
       ...(mediaType === 'image' && { imageUrl: mediaDataUrl }),
       ...(mediaType === 'video' && { videoUrl: mediaDataUrl }),
     };
@@ -68,6 +148,16 @@ export default function WhatsNew() {
     clearMedia();
   };
   
+  const handleCommentAdded = (postId: string, newComment: Comment) => {
+    setPosts(currentPosts => 
+      currentPosts.map(p => 
+        p.id === postId 
+        ? { ...p, comments: [...p.comments, newComment] }
+        : p
+      )
+    )
+  }
+
   const getInitials = (name: string | null | undefined) => {
     if (!name) return 'U';
     const names = name.split(' ');
@@ -156,7 +246,15 @@ export default function WhatsNew() {
                     <video src={post.videoUrl} controls className="w-full h-full" />
                 </div>
               )}
+               {(post.imageUrl || post.videoUrl) && (
+                <CommentSection post={post} onCommentAdded={handleCommentAdded} />
+              )}
             </CardContent>
+             {!post.imageUrl && !post.videoUrl && (
+                <CardFooter className="flex flex-col items-start">
+                  <CommentSection post={post} onCommentAdded={handleCommentAdded} />
+                </CardFooter>
+            )}
           </Card>
         ))}
       </div>

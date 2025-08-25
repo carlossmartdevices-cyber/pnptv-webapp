@@ -11,6 +11,13 @@ export interface User {
   slug?: string;
 }
 
+export interface Comment {
+  id: string;
+  author: User;
+  content: string;
+  createdAt: Date;
+}
+
 export interface Post {
   id: string;
   author: User;
@@ -18,6 +25,7 @@ export interface Post {
   imageUrl?: string;
   videoUrl?: string;
   createdAt: Date;
+  comments: Comment[];
 }
 
 export interface LiveEvent {
@@ -37,7 +45,7 @@ export interface Message {
 }
 
 export interface Channel {
-    id: string;
+    id:string;
     name: string;
     type: 'text' | 'voice';
     messages: Message[];

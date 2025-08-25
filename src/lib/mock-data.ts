@@ -1,4 +1,4 @@
-import type { User, Post, LiveEvent, Space } from './types';
+import type { User, Post, LiveEvent, Space, Comment } from './types';
 
 export const mockUsers: User[] = [
   {
@@ -57,6 +57,21 @@ export const mockUsers: User[] = [
   }
 ];
 
+const mockComments: Comment[] = [
+    {
+        id: 'comment-1',
+        author: mockUsers[2],
+        content: 'This looks amazing!',
+        createdAt: new Date(Date.now() - 1000 * 60 * 15)
+    },
+    {
+        id: 'comment-2',
+        author: mockUsers[3],
+        content: 'Love this track!',
+        createdAt: new Date(Date.now() - 1000 * 60 * 10)
+    }
+]
+
 export const mockPosts: Post[] = [
   {
     id: 'post-1',
@@ -64,18 +79,21 @@ export const mockPosts: Post[] = [
     content: 'Excited to announce my new track "Electric Dreams" is dropping next week! 🚀 #newmusic',
     imageUrl: 'https://placehold.co/1200x600/9400D3/FFFFFF.png?text=Electric+Dreams',
     createdAt: new Date(Date.now() - 1000 * 60 * 30), // 30 mins ago
+    comments: mockComments,
   },
   {
     id: 'post-2',
     author: mockUsers[2],
     content: 'Just deployed a new feature on my side project. Feels good to ship! 🚢',
     createdAt: new Date(Date.now() - 1000 * 60 * 60 * 2), // 2 hours ago
+    comments: [],
   },
   {
     id: 'post-3',
     author: mockUsers[3],
     content: 'The stars look amazing tonight. ✨',
     createdAt: new Date(Date.now() - 1000 * 60 * 60 * 24), // 1 day ago
+    comments: [],
   },
 ];
 
