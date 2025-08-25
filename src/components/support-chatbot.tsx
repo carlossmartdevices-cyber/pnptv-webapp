@@ -70,14 +70,14 @@ export default function SupportChatbot() {
 
   return (
     <>
-      <div className="fixed bottom-4 right-4 z-50">
+      <div className="fixed bottom-4 left-4 z-50">
         <AnimatePresence>
           {isOpen && (
             <motion.div
               initial={{ opacity: 0, y: 50, scale: 0.5 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 50, scale: 0.5 }}
-              className="w-80 h-[500px] bg-popover rounded-lg shadow-2xl border flex flex-col origin-bottom-right"
+              className="w-80 h-[500px] bg-popover rounded-lg shadow-2xl border flex flex-col origin-bottom-left"
             >
               <header className="p-4 border-b flex items-center justify-between">
                 <div className="flex items-center gap-2">
