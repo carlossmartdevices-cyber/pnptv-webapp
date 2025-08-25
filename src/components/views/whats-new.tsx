@@ -1,19 +1,22 @@
 'use client';
 
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
 import { Textarea } from '@/components/ui/textarea';
 import { useAuth } from '@/hooks/use-auth';
-import { mockPosts } from '@/lib/mock-data';
 import type { Post, Comment } from '@/lib/types';
 import { formatDistanceToNow } from 'date-fns';
 import { Send, Image as ImageIcon, Film, X, MessageSquare } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { Separator } from '../ui/separator';
 import { Input } from '../ui/input';
+import { collection, addDoc, serverTimestamp, query, orderBy, onSnapshot, doc, updateDoc, arrayUnion } from 'firebase/firestore';
+import { db, storage } from '@/lib/firebase';
+import { ref, uploadString, getDownloadURL } from 'firebase/storage';
+
 
 const MAX_IMAGE_SIZE_MB = 5;
 const MAX_VIDEO_SIZE_MB = 50;
@@ -55,7 +58,7 @@ const CommentSection = ({ post, onCommentAdded }: { post: Post; onCommentAdded: 
           <div className="bg-secondary rounded-lg p-2 text-sm w-full">
             <div className="flex items-baseline gap-2">
               <p className="font-semibold text-xs">{comment.author.displayName}</p>
-              <p className="text-xs text-muted-foreground">{formatDistanceToNow(comment.createdAt, { addSuffix: true })}</p>
+              <p className="text-xs text-muted-foreground">{formatDistanceToNow(new Date(comment.createdAt), { addSuffix: true })}</p>
             </div>
             <p>{comment.content}</p>
           </div>
@@ -83,13 +86,32 @@ const CommentSection = ({ post, onCommentAdded }: { post: Post; onCommentAdded: 
 
 export default function WhatsNew() {
   const { user } = useAuth();
-  const [posts, setPosts] = useState<Post[]>(mockPosts);
+  const [posts, setPosts] = useState<Post[]>([]);
   const [newPostContent, setNewPostContent] = useState('');
   const [mediaDataUrl, setMediaDataUrl] = useState<string | null>(null);
   const [mediaType, setMediaType] = useState<'image' | 'video' | null>(null);
+  const [isUploading, setIsUploading] = useState(false);
   const imageInputRef = useRef<HTMLInputElement>(null);
   const videoInputRef = useRef<HTMLInputElement>(null);
   const { toast } = useToast();
+
+  useEffect(() => {
+    const q = query(collection(db, "posts"), orderBy("createdAt", "desc"));
+    const unsubscribe = onSnapshot(q, (querySnapshot) => {
+      const postsData: Post[] = [];
+      querySnapshot.forEach((doc) => {
+        const data = doc.data();
+        postsData.push({ 
+            id: doc.id, 
+            ...data,
+            createdAt: data.createdAt?.toDate(),
+            comments: (data.comments || []).map((c: any) => ({...c, createdAt: c.createdAt?.toDate()}))
+        } as Post);
+      });
+      setPosts(postsData);
+    });
+    return () => unsubscribe();
+  }, []);
 
 
   const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>, type: 'image' | 'video') => {
@@ -132,30 +154,54 @@ export default function WhatsNew() {
     if(videoInputRef.current) videoInputRef.current.value = '';
   }
 
-  const handleCreatePost = () => {
+  const handleCreatePost = async () => {
     if (!newPostContent.trim() || !user) return;
-    const newPost: Post = {
-      id: `post-${Date.now()}`,
-      author: user,
+    setIsUploading(true);
+
+    let mediaUrl = '';
+    if (mediaDataUrl && mediaType) {
+        const storageRef = ref(storage, `posts/${user.uid}/${Date.now()}`);
+        const uploadResult = await uploadString(storageRef, mediaDataUrl, 'data_url');
+        mediaUrl = await getDownloadURL(uploadResult.ref);
+    }
+
+    const newPost = {
+      author: {
+        uid: user.uid,
+        displayName: user.displayName,
+        photoURL: user.photoURL,
+      },
       content: newPostContent,
-      createdAt: new Date(),
+      createdAt: serverTimestamp(),
       comments: [],
-      ...(mediaType === 'image' && { imageUrl: mediaDataUrl }),
-      ...(mediaType === 'video' && { videoUrl: mediaDataUrl }),
+      ...(mediaType === 'image' && { imageUrl: mediaUrl }),
+      ...(mediaType === 'video' && { videoUrl: mediaUrl }),
     };
-    setPosts([newPost, ...posts]);
+
+    await addDoc(collection(db, 'posts'), newPost);
+    
     setNewPostContent('');
     clearMedia();
+    setIsUploading(false);
+    toast({ title: "Post created!" });
   };
   
-  const handleCommentAdded = (postId: string, newComment: Comment) => {
-    setPosts(currentPosts => 
-      currentPosts.map(p => 
-        p.id === postId 
-        ? { ...p, comments: [...p.comments, newComment] }
-        : p
-      )
-    )
+  const handleCommentAdded = async (postId: string, newComment: Comment) => {
+    if(!user) return;
+    const postRef = doc(db, "posts", postId);
+    const commentToAdd = {
+        id: `comment-${Date.now()}`,
+        author: {
+            uid: user.uid,
+            displayName: user.displayName,
+            photoURL: user.photoURL
+        },
+        content: newComment.content,
+        createdAt: serverTimestamp()
+    };
+    await updateDoc(postRef, {
+        comments: arrayUnion(commentToAdd)
+    });
   }
 
   const getInitials = (name: string | null | undefined) => {
@@ -182,6 +228,7 @@ export default function WhatsNew() {
                         value={newPostContent}
                         onChange={(e) => setNewPostContent(e.target.value)}
                         className="w-full"
+                        disabled={isUploading}
                     />
                     {mediaDataUrl && (
                       <div className="relative">
@@ -190,7 +237,7 @@ export default function WhatsNew() {
                         ) : (
                            <video src={mediaDataUrl} controls className="rounded-md max-h-80 w-full" />
                         )}
-                        <Button variant="destructive" size="icon" className="absolute top-2 right-2 h-6 w-6" onClick={clearMedia}>
+                        <Button variant="destructive" size="icon" className="absolute top-2 right-2 h-6 w-6" onClick={clearMedia} disabled={isUploading}>
                            <X className="h-4 w-4" />
                         </Button>
                       </div>
@@ -200,19 +247,18 @@ export default function WhatsNew() {
         </CardHeader>
         <CardFooter className="flex justify-between items-center">
            <div className="flex gap-2">
-               <input type="file" accept="image/*" ref={imageInputRef} onChange={(e) => handleFileSelect(e, 'image')} className="hidden" />
-               <input type="file" accept="video/*" ref={videoInputRef} onChange={(e) => handleFileSelect(e, 'video')} className="hidden" />
-               <Button variant="ghost" size="icon" onClick={() => imageInputRef.current?.click()}>
+               <input type="file" accept="image/*" ref={imageInputRef} onChange={(e) => handleFileSelect(e, 'image')} className="hidden" disabled={isUploading} />
+               <input type="file" accept="video/*" ref={videoInputRef} onChange={(e) => handleFileSelect(e, 'video')} className="hidden" disabled={isUploading} />
+               <Button variant="ghost" size="icon" onClick={() => imageInputRef.current?.click()} disabled={isUploading}>
                    <ImageIcon />
                </Button>
-               <Button variant="ghost" size="icon" onClick={() => videoInputRef.current?.click()}>
+               <Button variant="ghost" size="icon" onClick={() => videoInputRef.current?.click()} disabled={isUploading}>
                    <Film />
                </Button>
            </div>
 
-          <Button onClick={handleCreatePost} disabled={!newPostContent.trim()}>
-            <Send />
-            <span>Post</span>
+          <Button onClick={handleCreatePost} disabled={!newPostContent.trim() || isUploading}>
+            {isUploading ? 'Posting...' : 'Post'}
           </Button>
         </CardFooter>
       </Card>
@@ -229,7 +275,7 @@ export default function WhatsNew() {
                 <div>
                   <p className="font-semibold">{post.author.displayName}</p>
                   <p className="text-xs text-muted-foreground">
-                    {formatDistanceToNow(post.createdAt, { addSuffix: true })}
+                    {post.createdAt ? formatDistanceToNow(post.createdAt, { addSuffix: true }) : 'just now'}
                   </p>
                 </div>
               </div>

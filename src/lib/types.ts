@@ -1,3 +1,5 @@
+import { Timestamp } from "firebase/firestore";
+
 export interface User {
   uid: string;
   email: string | null;
@@ -15,7 +17,7 @@ export interface Comment {
   id: string;
   author: User;
   content: string;
-  createdAt: Date;
+  createdAt: Date | Timestamp;
 }
 
 export interface Post {
@@ -24,7 +26,7 @@ export interface Post {
   content: string;
   imageUrl?: string;
   videoUrl?: string;
-  createdAt: Date;
+  createdAt: Date | Timestamp;
   comments: Comment[];
 }
 
@@ -33,15 +35,15 @@ export interface LiveEvent {
   title: string;
   description: string;
   imageUrl: string;
-  eventDate: Date;
-  createdAt: Date;
+  eventDate: Date | Timestamp;
+  createdAt: Date | Timestamp;
 }
 
 export interface Message {
     id: string;
     author: User;
     content: string;
-    createdAt: Date;
+    createdAt: Date | Timestamp;
 }
 
 export interface Channel {
