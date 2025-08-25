@@ -7,7 +7,7 @@ import {
   LogOut,
   Mail,
   ShieldCheck,
-  Star,
+  Gem,
   User as UserIcon,
   Users,
 } from 'lucide-react';
@@ -75,7 +75,7 @@ export function UserNav() {
           {user.isPerformer && (
              <DropdownMenuItem asChild>
                <Link href="/performer-panel">
-                 <Star />
+                 <Gem />
                  <span>Performer Panel</span>
                </Link>
              </DropdownMenuItem>
@@ -95,7 +95,7 @@ export function UserNav() {
            {mockUsers.map(mockUser => (
               <DropdownMenuItem key={mockUser.uid} onSelect={() => setUser(mockUser)}>
                 {mockUser.displayName}
-                {mockUser.uid === user.uid && <Star className="ml-auto fill-primary text-primary" />}
+                {mockUser.uid === user.uid && <Gem className="ml-auto fill-primary text-primary" />}
               </DropdownMenuItem>
            ))}
         </DropdownMenuGroup>
