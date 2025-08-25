@@ -42,7 +42,7 @@ export default function CommunityPage() {
       <div className="container mx-auto max-w-5xl py-12">
         <div className="mb-8 text-center">
             <h1 className="text-4xl font-bold">Our Community</h1>
-            <p className="text-muted-foreground">Browse and connect with all members of PNPtv Spark.</p>
+            <p className="text-muted-foreground">Browse and connect with all members of PNPtv App.</p>
         </div>
         
         <div className="mb-8 max-w-lg mx-auto relative">
@@ -68,7 +68,7 @@ export default function CommunityPage() {
                   {member.isPerformer ? <Badge className="mt-1">{member.category}</Badge> : 'Community Member'}
                 </CardDescription>
                 <p className="text-sm text-muted-foreground mt-4 line-clamp-2 h-10">
-                  {member.bio ?? 'A vibrant member of the Spark community.'}
+                  {member.bio ?? 'A vibrant member of the community.'}
                 </p>
               </CardContent>
               <CardContent className="p-4 pt-0">

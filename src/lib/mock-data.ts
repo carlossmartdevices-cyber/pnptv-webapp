@@ -3,17 +3,17 @@ import type { User, Post, LiveEvent } from './types';
 export const mockUsers: User[] = [
   {
     uid: 'admin-user',
-    email: 'admin@pnptv.spark',
-    displayName: 'Admin Spark',
+    email: 'admin@pnptv.app',
+    displayName: 'Admin',
     photoURL: 'https://placehold.co/100x100/A020F0/FFFFFF.png',
     isAdmin: true,
     isPerformer: false,
     bio: 'Running the show.',
-    slug: 'admin-spark',
+    slug: 'admin',
   },
   {
     uid: 'performer-user',
-    email: 'performer@pnptv.spark',
+    email: 'performer@pnptv.app',
     displayName: 'Violet Verse',
     photoURL: 'https://placehold.co/100x100/9400D3/FFFFFF.png',
     isAdmin: false,
@@ -29,7 +29,7 @@ export const mockUsers: User[] = [
   },
   {
     uid: 'regular-user-1',
-    email: 'user1@pnptv.spark',
+    email: 'user1@pnptv.app',
     displayName: 'Cosmic Coder',
     photoURL: 'https://placehold.co/100x100/282828/FFFFFF.png',
     isAdmin: false,
@@ -40,7 +40,7 @@ export const mockUsers: User[] = [
   {
     uid: 'regular-user-2',
     displayName: 'Galaxy Gazer',
-    email: 'user2@pnptv.spark',
+    email: 'user2@pnptv.app',
     photoURL: 'https://placehold.co/100x100.png',
     isAdmin: false,
     isPerformer: false,
@@ -49,7 +49,7 @@ export const mockUsers: User[] = [
   {
     uid: 'regular-user-3',
     displayName: 'Neon Nomad',
-    email: 'user3@pnptv.spark',
+    email: 'user3@pnptv.app',
     photoURL: 'https://placehold.co/100x100.png',
     isAdmin: false,
     isPerformer: false,
@@ -89,8 +89,8 @@ export const mockLiveEvents: LiveEvent[] = [
   },
   {
     id: 'event-2',
-    title: 'Admin Q&A: The Future of Spark',
-    description: 'The PNPtv Spark admin team will be live to answer your questions about the platform and what\'s coming next.',
+    title: 'Admin Q&A: The Future of the App',
+    description: 'The PNPtv App admin team will be live to answer your questions about the platform and what\'s coming next.',
     imageUrl: 'https://placehold.co/800x450/9400D3/FFFFFF.png?text=Q%26A',
     eventDate: new Date(Date.now() + 1000 * 60 * 60 * 24 * 7), // In 1 week
     createdAt: new Date(Date.now() - 1000 * 60 * 60 * 48),

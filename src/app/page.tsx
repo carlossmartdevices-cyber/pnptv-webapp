@@ -8,7 +8,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import WhatsNew from '@/components/views/whats-new';
 import LiveEvents from '@/components/views/live';
 import Performers from '@/components/views/performers';
-import { PnpTvSparkIcon } from '@/components/icons';
+import { PnpTvAppIcon } from '@/components/icons';
 
 export default function Home() {
   const { user, loading } = useAuth();
@@ -17,7 +17,7 @@ export default function Home() {
   if (loading) {
     return (
       <div className="flex min-h-screen w-full flex-col items-center justify-center bg-background">
-        <PnpTvSparkIcon className="h-16 w-16 animate-pulse" />
+        <PnpTvAppIcon className="h-16 w-16 animate-pulse" />
       </div>
     );
   }

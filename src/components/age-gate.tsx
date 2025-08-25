@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect, useCallback } from 'react';
 import { Camera, Check, RefreshCw, Sparkles, X } from 'lucide-react';
-import { PnpTvSparkIcon } from '@/components/icons';
+import { PnpTvAppIcon } from '@/components/icons';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { AuthForms } from '@/components/auth-forms';
@@ -106,7 +106,7 @@ export default function AgeGate({ onVerified }: AgeGateProps) {
       if (result.isAgeVerified && result.confidence > 0.6) {
         toast({
           title: "Verification Successful!",
-          description: "Welcome to PNPtv Spark. You are now being logged in as a guest.",
+          description: "Welcome to PNPtv App. You are now being logged in as a guest.",
         });
         onVerified();
       } else {
@@ -146,9 +146,9 @@ export default function AgeGate({ onVerified }: AgeGateProps) {
     <Card className="w-full max-w-md animate-fade-in-up">
       <CardHeader className="text-center">
         <div className="mx-auto mb-4">
-          <PnpTvSparkIcon className="h-16 w-16" />
+          <PnpTvAppIcon className="h-16 w-16" />
         </div>
-        <CardTitle className="text-3xl">Welcome to PNPtv Spark</CardTitle>
+        <CardTitle className="text-3xl">Welcome to PNPtv App</CardTitle>
         <CardDescription>The future of community and content is here.</CardDescription>
       </CardHeader>
       <CardContent className="space-y-6">

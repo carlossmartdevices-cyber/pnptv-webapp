@@ -23,7 +23,7 @@ export default function Performers() {
       <div className="text-center">
         <h2 className="text-3xl font-bold">Featured Performers</h2>
         <p className="text-muted-foreground">
-          Discover the talented creators lighting up the Spark community.
+          Discover the talented creators lighting up the community.
         </p>
       </div>
 

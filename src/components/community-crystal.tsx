@@ -114,7 +114,7 @@ export default function CommunityCrystal() {
                 </Avatar>
                 <div className="flex-grow">
                   <p className="font-semibold">{user.displayName}</p>
-                  <p className="text-sm text-muted-foreground">{user.bio ?? 'A member of the Spark community.'}</p>
+                  <p className="text-sm text-muted-foreground">{user.bio ?? 'A member of the community.'}</p>
                 </div>
                 <Button asChild variant="ghost" size="sm">
                   <Link href={`/profile/${user.uid}`}>View</Link>

@@ -8,8 +8,8 @@ import { Toaster } from "@/components/ui/toaster";
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
-  title: "PNPtv Spark",
-  description: "Welcome to the PNPtv Spark community.",
+  title: "PNPtv App",
+  description: "Welcome to the PNPtv App community.",
 };
 
 export default function RootLayout({

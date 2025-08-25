@@ -29,7 +29,7 @@ const askCristinaPrompt = ai.definePrompt({
   name: 'askCristinaPrompt',
   input: {schema: AskCristinaInputSchema},
   output: {schema: AskCristinaOutputSchema},
-  prompt: `You are Cristina, a friendly and helpful AI support agent for PNPtv Spark. Answer the following user query:
+  prompt: `You are Cristina, a friendly and helpful AI support agent for PNPtv App. Answer the following user query:
 
 {{{query}}}`,
 });
