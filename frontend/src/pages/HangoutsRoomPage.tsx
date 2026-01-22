@@ -1,21 +1,36 @@
-import React, { useState } from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useEffect, useMemo, useState } from 'react';
+import { useParams, useSearchParams } from 'react-router-dom';
 import { useAgoraRoom } from '../hangouts/agora/useAgoraRoom';
 import { VideoTile } from '../hangouts/agora/VideoTile';
 
 export const HangoutsRoomPage = () => {
   const { roomId } = useParams<{ roomId: string }>();
-  const [joinToken, setJoinToken] = useState('');
+  const [searchParams] = useSearchParams();
+  const initialToken = useMemo(() => searchParams.get('joinToken') ?? '', [searchParams]);
+  const [joinToken, setJoinToken] = useState(initialToken);
+  const [error, setError] = useState<string | null>(null);
   const { join, leave, localVideoTrack, remoteUsers, isJoined, roomTitle } = useAgoraRoom(roomId!);
 
   const handleJoin = async () => {
-    await join(joinToken || undefined);
+    try {
+      setError(null);
+      await join(joinToken || undefined);
+    } catch (err) {
+      setError('No fue posible unirse a la sala. Verifica el join token si es privada.');
+    }
   };
+
+  useEffect(() => {
+    if (initialToken) {
+      void handleJoin();
+    }
+  }, [initialToken]);
 
   return (
     <div>
       <h1>Hangout: {roomTitle || roomId}</h1>
-      <p>No grabar ni redistribuir contenido. Participas bajo tu responsabilidad.</p>
+      <p style={{ color: 'red' }}>No grabar ni redistribuir contenido. Participas bajo tu responsabilidad.</p>
+      {error && <p style={{ color: 'crimson' }}>{error}</p>}
       {!isJoined && (
         <div>
           <input
