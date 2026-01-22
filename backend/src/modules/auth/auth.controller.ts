@@ -4,7 +4,7 @@ import { env } from '../../env';
 import { prisma } from '../../db/prisma';
 import { signAccessToken } from './jwt';
 import { verifyTelegramHash } from './telegramVerify';
-import type { Role } from '@shared/rbac';
+import type { Role } from '../shared/rbac';
 
 const telegramSchema = z.object({
   id: z.string(),

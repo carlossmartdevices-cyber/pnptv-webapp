@@ -1,7 +1,7 @@
 import { prisma } from '../../db/prisma';
 
 export const listCollections = async (role: 'FREE' | 'PRIME' | 'ADMIN') => {
-  const visibilityFilter = role === 'FREE' ? ['PUBLIC'] : ['PUBLIC', 'PRIME'];
+  const visibilityFilter = role === 'FREE' ? ['PUBLIC'] : ['PUBLIC', 'PRIME'] as const;
   return prisma.collection.findMany({
     where: { visibility: { in: visibilityFilter } },
     include: { items: true },

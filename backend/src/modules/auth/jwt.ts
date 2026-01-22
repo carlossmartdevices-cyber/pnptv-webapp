@@ -1,6 +1,6 @@
 import jwt from 'jsonwebtoken';
 import { env } from '../../env';
-import type { Role } from '@shared/rbac';
+import type { Role } from '../../shared/rbac';
 
 export type JwtPayload = {
   sub: string;
@@ -8,8 +8,8 @@ export type JwtPayload = {
   termsAccepted: boolean;
 };
 
-export const signAccessToken = (payload: JwtPayload, expiresIn: string | number = '1h') => {
-  return jwt.sign(payload, env.JWT_SECRET as jwt.Secret, { expiresIn });
+export const signAccessToken = (payload: JwtPayload, expiresIn: string = '1h') => {
+  return jwt.sign(payload, env.JWT_SECRET, { expiresIn });
 };
 
 export const verifyAccessToken = (token: string) => {

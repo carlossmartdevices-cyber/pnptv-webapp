@@ -1,5 +1,6 @@
-import { RtcTokenBuilder, RtcRole } from 'agora-access-token';
+import agoraAccessToken from 'agora-access-token';
 import { env } from '../../env';
+const { RtcTokenBuilder, RtcRole } = agoraAccessToken;
 export const buildAgoraToken = (channelName, uid) => {
     const ttl = Number(env.AGORA_TOKEN_TTL_SECONDS);
     const expirationTimeInSeconds = Math.floor(Date.now() / 1000) + ttl;

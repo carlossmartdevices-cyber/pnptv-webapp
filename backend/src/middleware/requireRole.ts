@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
-import type { Role } from '@shared/rbac';
+import type { Role } from '../shared/rbac';
 
 export const requireRole = (roles: Role[]) => {
   return (req: Request, res: Response, next: NextFunction) => {
