@@ -8,8 +8,8 @@ export type JwtPayload = {
   termsAccepted: boolean;
 };
 
-export const signAccessToken = (payload: JwtPayload, expiresIn = '1h') => {
-  return jwt.sign(payload, env.JWT_SECRET, { expiresIn });
+export const signAccessToken = (payload: JwtPayload, expiresIn: string | number = '1h') => {
+  return jwt.sign(payload, env.JWT_SECRET as jwt.Secret, { expiresIn });
 };
 
 export const verifyAccessToken = (token: string) => {

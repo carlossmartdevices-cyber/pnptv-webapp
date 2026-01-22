@@ -34,16 +34,17 @@ enum CollectionVisibility {
 }
 
 model User {
-  telegramUserId String   @id
+  telegramUserId String       @id
   username       String?
   firstName      String?
   photoUrl       String?
-  role           Role     @default(FREE)
+  role           Role         @default(FREE)
   acceptedTermsAt DateTime?
-  createdAt      DateTime @default(now())
-  updatedAt      DateTime @updatedAt
+  createdAt      DateTime     @default(now())
+  updatedAt      DateTime     @updatedAt
   rooms          Room[]
   collections    Collection[]
+  memberships    Membership[]
 }
 
 model Membership {
