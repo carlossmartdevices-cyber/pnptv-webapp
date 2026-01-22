@@ -1,0 +1,25 @@
+import express from 'express';
+import helmet from 'helmet';
+import cors from 'cors';
+import { env } from './env';
+import { apiRateLimit } from './middleware/rateLimit';
+import { authRouter } from './modules/auth/auth.routes';
+import { hangoutsRouter } from './modules/hangouts/hangouts.routes';
+import { videoramaRouter } from './modules/videorama/videorama.routes';
+
+const app = express();
+
+app.use(helmet());
+app.use(cors({ origin: env.CORS_ORIGIN, credentials: true }));
+app.use(express.json({ limit: '1mb' }));
+app.use(apiRateLimit);
+
+app.get('/health', (_req, res) => res.json({ ok: true }));
+
+app.use('/auth', authRouter);
+app.use('/hangouts', hangoutsRouter);
+app.use('/videorama', videoramaRouter);
+
+app.listen(Number(env.PORT), () => {
+  console.log(`API listening on ${env.PORT}`);
+});

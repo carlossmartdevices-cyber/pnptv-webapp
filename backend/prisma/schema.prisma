@@ -1,0 +1,92 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  FREE
+  PRIME
+  ADMIN
+}
+
+enum RoomVisibility {
+  PUBLIC
+  PRIVATE
+}
+
+enum RoomStatus {
+  OPEN
+  CLOSED
+}
+
+enum CollectionType {
+  PLAYLIST
+  PODCAST
+}
+
+enum CollectionVisibility {
+  PUBLIC
+  PRIME
+}
+
+model User {
+  telegramUserId String   @id
+  username       String?
+  firstName      String?
+  photoUrl       String?
+  role           Role     @default(FREE)
+  acceptedTermsAt DateTime?
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+  rooms          Room[]
+  collections    Collection[]
+}
+
+model Membership {
+  id             String   @id @default(uuid())
+  telegramUserId String
+  plan           String
+  status         String
+  expiresAt      DateTime?
+  user           User     @relation(fields: [telegramUserId], references: [telegramUserId])
+  createdAt      DateTime @default(now())
+}
+
+model Room {
+  id            String         @id @default(uuid())
+  title         String
+  visibility    RoomVisibility
+  status        RoomStatus     @default(OPEN)
+  hostId        String
+  channelName   String
+  joinTokenHash String?
+  createdAt     DateTime       @default(now())
+  host          User           @relation(fields: [hostId], references: [telegramUserId])
+}
+
+model Collection {
+  id          String                @id @default(uuid())
+  type        CollectionType
+  title       String
+  description String
+  ownerId     String
+  visibility  CollectionVisibility
+  items       Item[]
+  createdAt   DateTime              @default(now())
+  updatedAt   DateTime              @updatedAt
+  owner       User                  @relation(fields: [ownerId], references: [telegramUserId])
+}
+
+model Item {
+  id           String      @id @default(uuid())
+  title        String
+  url          String
+  duration     Int?
+  meta         Json?
+  collectionId String
+  collection   Collection @relation(fields: [collectionId], references: [id])
+}
