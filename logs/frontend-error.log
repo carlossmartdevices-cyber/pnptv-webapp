@@ -1,0 +1,448 @@
+Error: getaddrinfo ENOTFOUND -l
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:111:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: '-l'
+}
+Error: getaddrinfo ENOTFOUND -l
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:111:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: '-l'
+}
+Error: getaddrinfo ENOTFOUND -l
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:111:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: '-l'
+}
+Error: getaddrinfo ENOTFOUND -l
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:111:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: '-l'
+}
+Error: getaddrinfo ENOTFOUND -l
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:111:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: '-l'
+}
+Error: getaddrinfo ENOTFOUND -l
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:111:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: '-l'
+}
+Error: getaddrinfo ENOTFOUND -l
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:111:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: '-l'
+}
+Error: getaddrinfo ENOTFOUND -l
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:111:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: '-l'
+}
+Error: getaddrinfo ENOTFOUND -l
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:111:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: '-l'
+}
+Error: getaddrinfo ENOTFOUND -l
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:111:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: '-l'
+}
+Error: getaddrinfo ENOTFOUND -l
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:111:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: '-l'
+}
+Error: getaddrinfo ENOTFOUND -l
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:111:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: '-l'
+}
+Error: getaddrinfo ENOTFOUND -l
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:111:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: '-l'
+}
+Error: getaddrinfo ENOTFOUND -l
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:111:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: '-l'
+}
+Error: getaddrinfo ENOTFOUND -l
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:111:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: '-l'
+}
+Error: getaddrinfo ENOTFOUND -l
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:111:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: '-l'
+}
+Error: getaddrinfo ENOTFOUND -l
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:111:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: '-l'
+}
+Error: getaddrinfo ENOTFOUND -l
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:111:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: '-l'
+}
+Error: getaddrinfo ENOTFOUND -l
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:111:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: '-l'
+}
+Error: getaddrinfo ENOTFOUND -l
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:111:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: '-l'
+}
+Error: getaddrinfo ENOTFOUND -l
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:111:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: '-l'
+}
+Error: getaddrinfo ENOTFOUND -l
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:111:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: '-l'
+}
+Error: getaddrinfo ENOTFOUND -l
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:111:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: '-l'
+}
+Error: getaddrinfo ENOTFOUND -l
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:111:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: '-l'
+}
+Error: getaddrinfo ENOTFOUND -l
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:111:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: '-l'
+}
+Error: getaddrinfo ENOTFOUND -l
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:111:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: '-l'
+}
+Error: getaddrinfo ENOTFOUND -l
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:111:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: '-l'
+}
+Error: getaddrinfo ENOTFOUND -l
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:111:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: '-l'
+}
+Error: getaddrinfo ENOTFOUND -l
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:111:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: '-l'
+}
+Error: getaddrinfo ENOTFOUND -l
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:111:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: '-l'
+}
+Error: getaddrinfo ENOTFOUND -l
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:111:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: '-l'
+}
+Error: getaddrinfo ENOTFOUND -l
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:111:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: '-l'
+}
+Error: getaddrinfo ENOTFOUND -l
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:111:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: '-l'
+}
+Error: getaddrinfo ENOTFOUND -l
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:111:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: '-l'
+}
+Error: getaddrinfo ENOTFOUND -l
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:111:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: '-l'
+}
+Error: getaddrinfo ENOTFOUND -l
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:111:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: '-l'
+}
+Error: getaddrinfo ENOTFOUND -l
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:111:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: '-l'
+}
+Error: getaddrinfo ENOTFOUND -l
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:111:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: '-l'
+}
+Error: getaddrinfo ENOTFOUND -l
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:111:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: '-l'
+}
+Error: getaddrinfo ENOTFOUND -l
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:111:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: '-l'
+}
+Error: getaddrinfo ENOTFOUND -l
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:111:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: '-l'
+}
+Error: getaddrinfo ENOTFOUND -l
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:111:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: '-l'
+}
+Error: getaddrinfo ENOTFOUND -l
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:111:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: '-l'
+}
+Error: getaddrinfo ENOTFOUND -l
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:111:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: '-l'
+}
+Error: getaddrinfo ENOTFOUND -l
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:111:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: '-l'
+}
+Error: getaddrinfo ENOTFOUND -l
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:111:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: '-l'
+}
+Error: getaddrinfo ENOTFOUND -l
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:111:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: '-l'
+}
+Error: getaddrinfo ENOTFOUND -l
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:111:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: '-l'
+}
+Error: getaddrinfo ENOTFOUND -p
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:111:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: '-p'
+}
+Error: getaddrinfo ENOTFOUND -p
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:111:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: '-p'
+}
+Error: getaddrinfo ENOTFOUND -p
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:111:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: '-p'
+}
+Error: getaddrinfo ENOTFOUND -p
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:111:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: '-p'
+}
+Error: getaddrinfo ENOTFOUND -p
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:111:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: '-p'
+}
+Error: getaddrinfo ENOTFOUND -p
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:111:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: '-p'
+}
+Error: getaddrinfo ENOTFOUND -p
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:111:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: '-p'
+}
+Error: getaddrinfo ENOTFOUND -p
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:111:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: '-p'
+}
+Error: getaddrinfo ENOTFOUND -p
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:111:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: '-p'
+}
+Error: getaddrinfo ENOTFOUND -p
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:111:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: '-p'
+}
+Error: getaddrinfo ENOTFOUND -p
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:111:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: '-p'
+}
+Error: getaddrinfo ENOTFOUND -p
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:111:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: '-p'
+}
+Error: getaddrinfo ENOTFOUND -p
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:111:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: '-p'
+}
+Error: getaddrinfo ENOTFOUND -p
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:111:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: '-p'
+}
+Error: getaddrinfo ENOTFOUND -p
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:111:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: '-p'
+}
+Error: getaddrinfo ENOTFOUND -p
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:111:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: '-p'
+}
