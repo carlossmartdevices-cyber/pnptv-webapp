@@ -1,0 +1,96 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  FREE
+  PRIME
+  ADMIN
+}
+
+enum RoomVisibility {
+  PUBLIC
+  PRIVATE
+}
+
+enum RoomStatus {
+  OPEN
+  CLOSED
+}
+
+enum CollectionVisibility {
+  PUBLIC
+  PRIME
+}
+
+enum CollectionType {
+  PLAYLIST
+  PODCAST
+}
+
+model User {
+  id               String   @id @default(cuid())
+  telegramUserId   String   @unique
+  username         String?
+  firstName        String?
+  photoUrl         String?
+  role             Role     @default(FREE)
+  acceptedTermsAt  DateTime?
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  rooms            Room[]
+  collections      Collection[]
+}
+
+model Membership {
+  id             String   @id @default(cuid())
+  telegramUserId String
+  plan           String
+  status         String
+  expiresAt      DateTime?
+  createdAt      DateTime @default(now())
+}
+
+model Room {
+  id           String         @id @default(cuid())
+  title        String
+  visibility   RoomVisibility
+  status       RoomStatus     @default(OPEN)
+  hostId       String
+  channelName  String
+  joinTokenHash String?
+  createdAt    DateTime       @default(now())
+
+  host         User           @relation(fields: [hostId], references: [id])
+}
+
+model Collection {
+  id          String               @id @default(cuid())
+  type        CollectionType
+  title       String
+  description String
+  ownerId     String
+  visibility  CollectionVisibility
+  createdAt   DateTime             @default(now())
+  updatedAt   DateTime             @updatedAt
+
+  owner       User                 @relation(fields: [ownerId], references: [id])
+  items       Item[]
+}
+
+model Item {
+  id           String   @id @default(cuid())
+  title        String
+  url          String
+  duration     Int?
+  meta         Json?
+  collectionId String
+
+  collection   Collection @relation(fields: [collectionId], references: [id])
+}
