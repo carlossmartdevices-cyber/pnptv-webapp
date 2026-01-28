@@ -17,6 +17,9 @@ import { Monitoring } from './utils/monitoring';
 const app = express();
 const monitoring = Monitoring.getInstance();
 
+// Trust proxy settings for rate limiting and security headers
+app.set('trust proxy', true);
+
 // Initialize monitoring
 if (env.NODE_ENV === 'production') {
   monitoring.startMemoryMonitoring();
