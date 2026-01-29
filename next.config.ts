@@ -16,6 +16,22 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async rewrites() {
+    return [
+      {
+        source: '/lifetime100',
+        destination: '/lifetime100.html',
+      },
+      {
+        source: '/terms',
+        destination: '/terms.html',
+      },
+      {
+        source: '/privacy',
+        destination: '/privacy.html',
+      },
+    ];
+  },
 };
 
 export default nextConfig;
