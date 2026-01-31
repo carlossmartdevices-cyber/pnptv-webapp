@@ -15,7 +15,7 @@ export const LoginPage = () => {
 
   useEffect(() => {
     if (accessToken) {
-      navigate('/hangouts');
+      navigate('/home');
     }
   }, [accessToken, navigate]);
 
@@ -29,7 +29,7 @@ export const LoginPage = () => {
         auth_date: Number(user.auth_date),
         hash: String(user.hash),
       });
-      navigate('/hangouts');
+      navigate('/home');
     };
 
     if (!containerRef.current) return;
@@ -50,8 +50,8 @@ export const LoginPage = () => {
 
   return (
     <div>
-      <h1>Login</h1>
-      <p>Accede con tu cuenta de Telegram para continuar.</p>
+      <h1>PNPtv Login</h1>
+      <p>Login with your Telegram account to continue.</p>
       <div ref={containerRef} />
     </div>
   );

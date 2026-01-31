@@ -16,7 +16,7 @@ export const TermsPage = () => {
     await apiClient.post('/auth/accept-terms');
     await refreshMe();
     setLoading(false);
-    navigate('/hangouts');
+    navigate('/home');
   };
 
   return (

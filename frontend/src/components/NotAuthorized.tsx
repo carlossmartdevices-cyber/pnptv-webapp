@@ -5,6 +5,6 @@ export const NotAuthorized = () => (
   <div>
     <h2>No autorizado</h2>
     <p>Tu rol actual no permite esta acción.</p>
-    <Link to="/hangouts">Volver</Link>
+    <Link to="/home">Volver</Link>
   </div>
 );

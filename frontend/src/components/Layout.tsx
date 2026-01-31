@@ -9,6 +9,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
     <div>
       <header style={{ display: 'flex', justifyContent: 'space-between', padding: '1rem' }}>
         <nav style={{ display: 'flex', gap: '1rem' }}>
+          <Link to="/home">Home</Link>
           <Link to="/hangouts">Hangouts</Link>
           <Link to="/videorama">Videorama</Link>
         </nav>

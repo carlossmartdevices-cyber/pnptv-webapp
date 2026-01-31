@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react';
-import { Navigate, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import { useAuth } from '../auth/AuthProvider';
 import { ProtectedRoute } from './ProtectedRoute';
 import { Layout } from '../components/Layout';
 import { LoginPage } from '../pages/LoginPage';
 import { TermsPage } from '../pages/TermsPage';
+import { HomePage } from '../pages/HomePage';
 import { HangoutsListPage } from '../pages/HangoutsListPage';
 import { HangoutsCreatePage } from '../pages/HangoutsCreatePage';
 import { HangoutsRoomPage } from '../pages/HangoutsRoomPage';
@@ -22,9 +23,17 @@ const App = () => {
   return (
     <Layout>
       <Routes>
-        <Route path="/" element={<Navigate to="/hangouts" replace />} />
+        <Route path="/" element={<LoginPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/terms" element={<TermsPage />} />
+        <Route
+          path="/home"
+          element={
+            <ProtectedRoute>
+              <HomePage />
+            </ProtectedRoute>
+          }
+        />
         <Route
           path="/hangouts"
           element={
