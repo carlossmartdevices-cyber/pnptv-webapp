@@ -1,6 +1,6 @@
 import { Router } from 'express';
-import { authRequired } from '../../middleware/authRequired';
-import { acceptTerms, me, telegramAuth } from './auth.controller';
+import { authRequired } from '../../middleware/authRequired.js';
+import { acceptTerms, me, telegramAuth } from './auth.controller.js';
 
 export const authRouter = Router();
 

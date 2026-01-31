@@ -3,7 +3,7 @@ const require = createRequire(import.meta.url);
 const agoraAccessToken = require('agora-access-token');
 
 const { RtcTokenBuilder, RtcRole } = agoraAccessToken;
-import { env } from '../../env';
+import { env } from '../../env.js';
 
 export const buildAgoraToken = (channelName: string, uid: string) => {
   const ttl = Number(env.AGORA_TOKEN_TTL_SECONDS);

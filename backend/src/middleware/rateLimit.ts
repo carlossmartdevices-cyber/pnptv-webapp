@@ -1,6 +1,6 @@
 import rateLimit from 'express-rate-limit';
-import { env } from '../env';
-import { securityConfig } from '../config/security';
+import { env } from '../env.js';
+import { securityConfig } from '../config/security.js';
 
 export const apiRateLimit = rateLimit({
   windowMs: securityConfig.rateLimiting.windowMs,
@@ -13,14 +13,15 @@ export const apiRateLimit = rateLimit({
     return req.path === '/health' || env.NODE_ENV === 'development';
   },
   keyGenerator: (req) => {
-    // Use IP address for rate limiting
-    return req.ip;
+    const forwarded = req.headers['x-forwarded-for'];
+    const forwardedIp = typeof forwarded === 'string' ? forwarded.split(',')[0]?.trim() : undefined;
+    return req.ip ?? forwardedIp ?? 'unknown';
   },
   handler: (req, res) => {
     res.status(429).json({
       error: 'Too Many Requests',
       message: securityConfig.rateLimiting.message,
-      retryAfter: req.rateLimit.resetTime,
+      retryAfter: req.rateLimit?.resetTime?.toISOString(),
       timestamp: new Date().toISOString()
     });
   }
@@ -34,12 +35,12 @@ export const authRateLimit = rateLimit({
   legacyHeaders: false,
   message: 'Too many login attempts, please try again later.',
   skip: (req) => env.NODE_ENV === 'development',
-  keyGenerator: (req) => req.ip,
+  keyGenerator: (req) => req.ip ?? 'unknown',
   handler: (req, res) => {
     res.status(429).json({
       error: 'Too Many Requests',
       message: 'Too many login attempts, please try again later.',
-      retryAfter: req.rateLimit.resetTime,
+      retryAfter: req.rateLimit?.resetTime?.toISOString(),
       timestamp: new Date().toISOString()
     });
   }

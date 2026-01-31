@@ -1,5 +1,5 @@
 import { describe, expect, it, vi } from 'vitest';
-import { requireTerms } from './requireTerms';
+import { requireTerms } from './requireTerms.js';
 vi.mock('../db/prisma', () => ({
     prisma: {
         user: {

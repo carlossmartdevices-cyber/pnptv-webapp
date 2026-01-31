@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { createRoom, joinRoom, listPublicRooms } from './hangouts.service';
+import { createRoom, joinRoom, listPublicRooms } from './hangouts.service.js';
 const createSchema = z.object({
     title: z.string().min(3),
     visibility: z.enum(['PUBLIC', 'PRIVATE']),

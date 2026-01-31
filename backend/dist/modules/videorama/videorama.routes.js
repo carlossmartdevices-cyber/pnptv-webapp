@@ -1,7 +1,7 @@
 import { Router } from 'express';
-import { authRequired } from '../../middleware/authRequired';
-import { requireTerms } from '../../middleware/requireTerms';
-import { deleteCollectionById, getCollectionById, getCollections, postCollection, putCollection, } from './videorama.controller';
+import { authRequired } from '../../middleware/authRequired.js';
+import { requireTerms } from '../../middleware/requireTerms.js';
+import { deleteCollectionById, getCollectionById, getCollections, postCollection, putCollection, } from './videorama.controller.js';
 export const videoramaRouter = Router();
 videoramaRouter.get('/collections', authRequired, requireTerms, getCollections);
 videoramaRouter.get('/collections/:id', authRequired, requireTerms, getCollectionById);

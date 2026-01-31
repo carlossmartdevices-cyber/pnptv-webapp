@@ -1,7 +1,7 @@
 import crypto from 'node:crypto';
-import { prisma } from '../../db/prisma';
-import { buildAgoraToken } from './agoraToken.service';
-import { env } from '../../env';
+import { prisma } from '../../db/prisma.js';
+import { buildAgoraToken } from './agoraToken.service.js';
+import { env } from '../../env.js';
 
 const hashToken = (token: string) => crypto.createHash('sha256').update(token).digest('hex');
 

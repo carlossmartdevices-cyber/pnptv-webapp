@@ -1,18 +1,26 @@
 import express from 'express';
 import helmet from 'helmet';
 import cors from 'cors';
-import { env } from './env';
-import { apiRateLimit } from './middleware/rateLimit';
-import { authRouter } from './modules/auth/auth.routes';
-import { hangoutsRouter } from './modules/hangouts/hangouts.routes';
-import { videoramaRouter } from './modules/videorama/videorama.routes';
-import { errorHandler } from './middleware/errorHandler';
-import { requestLogger } from './middleware/requestLogger';
-import { securityHeaders } from './middleware/securityHeaders';
-import { connectDatabase, getDatabaseStats } from './utils/database';
-import { securityConfig } from './config/security';
-import { logger } from './config/logging';
-import { Monitoring } from './utils/monitoring';
+import { env } from './env.js';
+import { apiRateLimit } from './middleware/rateLimit.js';
+import { authRouter } from './modules/auth/auth.routes.js';
+import { hangoutsRouter } from './modules/hangouts/hangouts.routes.js';
+import { videoramaRouter } from './modules/videorama/videorama.routes.js';
+import { errorHandler } from './middleware/errorHandler.js';
+import { requestLogger } from './middleware/requestLogger.js';
+import { securityHeaders } from './middleware/securityHeaders.js';
+import { connectDatabase, getDatabaseStats } from './utils/database.js';
+import { securityConfig } from './config/security.js';
+import { logger } from './config/logging.js';
+import { Monitoring } from './utils/monitoring.js';
+import { prisma } from './db/prisma.js';
+
+const formatUnknownError = (error: unknown) => {
+  if (error instanceof Error) return error.message;
+  if (typeof error === 'string') return error;
+  if (error === undefined) return 'Unknown error';
+  return JSON.stringify(error);
+};
 
 const app = express();
 const monitoring = Monitoring.getInstance();
@@ -81,7 +89,8 @@ app.use(errorHandler);
 
 // Database Connection
 connectDatabase().catch(error => {
-  console.error('❌ Failed to connect to database:', error);
+  const message = formatUnknownError(error);
+  console.error('❌ Failed to connect to database:', message);
   process.exit(1);
 });
 
@@ -108,7 +117,7 @@ app.get('/health/db', async (req, res) => {
     res.status(503).json({
       ok: false,
       database: 'unhealthy',
-      error: error.message,
+      error: formatUnknownError(error),
       timestamp: new Date().toISOString()
     });
   }

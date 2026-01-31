@@ -1,4 +1,4 @@
-import { prisma } from '../../db/prisma';
+import { prisma } from '../../db/prisma.js';
 export const listCollections = async (role) => {
     const visibilityFilter = role === 'FREE' ? ['PUBLIC'] : ['PUBLIC', 'PRIME'];
     return prisma.collection.findMany({

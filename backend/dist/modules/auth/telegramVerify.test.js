@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { verifyTelegramHash } from './telegramVerify';
+import { verifyTelegramHash } from './telegramVerify.js';
 const BOT_TOKEN = 'test-token-1234567890';
 describe('verifyTelegramHash', () => {
     it('rejects invalid hash', () => {

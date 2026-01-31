@@ -1,13 +1,13 @@
 import { Router } from 'express';
-import { authRequired } from '../../middleware/authRequired';
-import { requireTerms } from '../../middleware/requireTerms';
+import { authRequired } from '../../middleware/authRequired.js';
+import { requireTerms } from '../../middleware/requireTerms.js';
 import {
   deleteCollectionById,
   getCollectionById,
   getCollections,
   postCollection,
   putCollection,
-} from './videorama.controller';
+} from './videorama.controller.js';
 
 export const videoramaRouter = Router();
 

@@ -1,6 +1,6 @@
 import { z } from 'zod';
-import { can } from '../shared/rbac';
-import { createCollection, deleteCollection, getCollection, listCollections, updateCollection } from './videorama.service';
+import { can } from '../../shared/rbac.js';
+import { createCollection, deleteCollection, getCollection, listCollections, updateCollection } from './videorama.service.js';
 const createSchema = z.object({
     type: z.enum(['PLAYLIST', 'PODCAST']),
     title: z.string().min(2),

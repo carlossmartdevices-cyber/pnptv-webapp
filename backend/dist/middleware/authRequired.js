@@ -1,4 +1,4 @@
-import { verifyAccessToken } from '../modules/auth/jwt';
+import { verifyAccessToken } from '../modules/auth/jwt.js';
 export const authRequired = (req, res, next) => {
     const header = req.headers.authorization;
     if (!header?.startsWith('Bearer ')) {

@@ -6,3 +6,12 @@ Frontend server running on port 3000
 Frontend server running on port 3000
 Frontend server running on port 3000
 Frontend server running on port 3000
+🚀 Frontend server running in production mode on port 3000
+::1 - - [31/Jan/2026:08:51:20 +0000] "HEAD / HTTP/1.1" 200 573 "-" "curl/8.5.0"
+🛑 SIGINT received. Shutting down gracefully...
+👋 Frontend server closed
+🚀 Frontend server running in production mode on port 3000
+::ffff:146.70.11.64 - - [31/Jan/2026:09:10:17 +0000] "GET / HTTP/1.1" 200 573 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+::ffff:146.70.11.64 - - [31/Jan/2026:09:10:17 +0000] "GET /favicon.ico HTTP/1.1" 200 573 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+::1 - - [31/Jan/2026:09:18:35 +0000] "GET / HTTP/1.1" 200 573 "-" "Mozilla/5.0 (X11; U; Linux x86_64; en-US) AppleWebKit/533.4 (KHTML, like Gecko) Chrome/5.0.368.0 Safari/533.4"
+::1 - - [31/Jan/2026:09:33:49 +0000] "POST /xmlrpc.php HTTP/1.1" 404 150 "-" "Mozilla/5.0 (Windows NT 10.0; x64) AppleWebKit/537.36 (KHTML, like Gecko) Opera/67.0.0.0 Safari/537.36"

@@ -113,7 +113,7 @@ if grep -q "pnptv_password" .env; then
 fi
 
 # Check if email is set for SSL
-if ! grep -q "your-email@example.com" .env; then
+if ! grep -q "support@pnptv.app" .env; then
     print_warning "Please set your email in the .env file for SSL certificate registration"
     read -p "Do you want to continue anyway? (y/n) " -n 1 -r
     echo
@@ -171,7 +171,7 @@ docker run --rm \
   -v /etc/letsencrypt:/etc/letsencrypt \
   -v /var/www/certbot:/var/www/certbot \
   certbot/certbot certonly --webroot --webroot-path=/var/www/certbot \
-  --email your-email@example.com --agree-tos --no-eff-email \
+  --email support@pnptv.app --agree-tos --no-eff-email \
   -d pnptv.app -d www.pnptv.app
 
 print_success "SSL certificates obtained successfully"

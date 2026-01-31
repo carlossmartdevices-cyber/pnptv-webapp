@@ -1,10 +1,10 @@
 import { Request, Response } from 'express';
 import { z } from 'zod';
-import { env } from '../../env';
-import { prisma } from '../../db/prisma';
-import { signAccessToken } from './jwt';
-import { verifyTelegramHash } from './telegramVerify';
-import type { Role } from '../shared/rbac';
+import { env } from '../../env.js';
+import { prisma } from '../../db/prisma.js';
+import { signAccessToken } from './jwt.js';
+import { verifyTelegramHash } from './telegramVerify.js';
+import type { Role } from '../../shared/rbac.js';
 
 const telegramSchema = z.object({
   id: z.string(),

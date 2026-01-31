@@ -1,4 +1,4 @@
-import { prisma } from '../db/prisma';
+import { prisma } from '../db/prisma.js';
 export const requireTerms = async (req, res, next) => {
     const userId = req.user?.sub;
     if (!userId) {

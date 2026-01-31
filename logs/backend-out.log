@@ -1,3 +1,93 @@
 API listening on 4000
 API listening on 4000
 API listening on 4000
+[32minfo[39m: 💻 System Information: {"arch":"x64","cpus":4,"freeMemory":"6.46 GB","nodeVersion":"v24.13.0","platform":"linux","timestamp":"2026-01-31T08:46:00.484Z","totalMemory":"15.62 GB","uptime":"27.51 hours"}
+[32minfo[39m: 🚀 API Server running in production mode on port 4000 {"timestamp":"2026-01-31T08:46:00.491Z"}
+[32minfo[39m: 📡 CORS enabled for: https://pnptv.app,https://www.pnptv.app {"timestamp":"2026-01-31T08:46:00.491Z"}
+[32minfo[39m: 🔒 Security: JWT expires in 1h, Rate limiting: 200 requests per 15 minutes {"timestamp":"2026-01-31T08:46:00.491Z"}
+[32minfo[39m: 📊 Monitoring: Performance tracking and memory monitoring enabled {"timestamp":"2026-01-31T08:46:00.491Z"}
+[32minfo[39m: 🔌 Database connected successfully {"timestamp":"2026-01-31T08:46:01.778Z"}
+[32minfo[39m: 📊 Memory Usage: {"external":"3.64 MB","heapTotal":"32.50 MB","heapUsed":"13.92 MB","rss":"129.20 MB","timestamp":"2026-01-31T08:47:00.487Z"}
+[32minfo[39m: 📊 Memory Usage: {"external":"3.64 MB","heapTotal":"15.50 MB","heapUsed":"13.62 MB","rss":"120.53 MB","timestamp":"2026-01-31T08:48:00.491Z"}
+[32minfo[39m: 📊 Memory Usage: {"external":"3.64 MB","heapTotal":"15.50 MB","heapUsed":"13.67 MB","rss":"120.53 MB","timestamp":"2026-01-31T08:49:00.492Z"}
+[32minfo[39m: 📊 Memory Usage: {"external":"3.64 MB","heapTotal":"15.75 MB","heapUsed":"13.73 MB","rss":"119.44 MB","timestamp":"2026-01-31T08:50:00.598Z"}
+[32minfo[39m: 📊 Memory Usage: {"external":"3.64 MB","heapTotal":"15.75 MB","heapUsed":"13.77 MB","rss":"119.44 MB","timestamp":"2026-01-31T08:51:00.682Z"}
+[32minfo[39m: 📊 Memory Usage: {"external":"3.64 MB","heapTotal":"15.75 MB","heapUsed":"13.79 MB","rss":"119.44 MB","timestamp":"2026-01-31T08:52:00.794Z"}
+[32minfo[39m: 📊 Memory Usage: {"external":"3.64 MB","heapTotal":"15.75 MB","heapUsed":"13.81 MB","rss":"119.44 MB","timestamp":"2026-01-31T08:53:00.799Z"}
+[32minfo[39m: 📊 Memory Usage: {"external":"3.64 MB","heapTotal":"15.75 MB","heapUsed":"13.83 MB","rss":"119.69 MB","timestamp":"2026-01-31T08:54:00.884Z"}
+[32minfo[39m: 📊 Memory Usage: {"external":"3.64 MB","heapTotal":"15.75 MB","heapUsed":"13.85 MB","rss":"119.69 MB","timestamp":"2026-01-31T08:55:00.903Z"}
+[32minfo[39m: 📊 Memory Usage: {"external":"3.64 MB","heapTotal":"15.75 MB","heapUsed":"13.88 MB","rss":"119.69 MB","timestamp":"2026-01-31T08:56:00.984Z"}
+[32minfo[39m: 📊 Memory Usage: {"external":"3.64 MB","heapTotal":"15.75 MB","heapUsed":"13.90 MB","rss":"105.19 MB","timestamp":"2026-01-31T08:57:01.086Z"}
+🛑 SIGINT received. Shutting down gracefully...
+👋 Server and database connections closed
+[32minfo[39m: 💻 System Information: {"arch":"x64","cpus":4,"freeMemory":"2.72 GB","nodeVersion":"v24.13.0","platform":"linux","timestamp":"2026-01-31T08:57:10.092Z","totalMemory":"15.62 GB","uptime":"27.70 hours"}
+[32minfo[39m: 🚀 API Server running in production mode on port 4000 {"timestamp":"2026-01-31T08:57:10.098Z"}
+[32minfo[39m: 📡 CORS enabled for: https://pnptv.app,https://www.pnptv.app {"timestamp":"2026-01-31T08:57:10.099Z"}
+[32minfo[39m: 🔒 Security: JWT expires in 1h, Rate limiting: 200 requests per 15 minutes {"timestamp":"2026-01-31T08:57:10.100Z"}
+[32minfo[39m: 📊 Monitoring: Performance tracking and memory monitoring enabled {"timestamp":"2026-01-31T08:57:10.100Z"}
+[32minfo[39m: 🔌 Database connected successfully {"timestamp":"2026-01-31T08:57:10.386Z"}
+[32minfo[39m: 📊 Memory Usage: {"external":"3.64 MB","heapTotal":"32.50 MB","heapUsed":"13.93 MB","rss":"117.43 MB","timestamp":"2026-01-31T08:58:10.093Z"}
+[32minfo[39m: 📊 Memory Usage: {"external":"3.64 MB","heapTotal":"16.00 MB","heapUsed":"13.64 MB","rss":"94.14 MB","timestamp":"2026-01-31T08:59:10.098Z"}
+[32minfo[39m: 📊 Memory Usage: {"external":"3.64 MB","heapTotal":"16.00 MB","heapUsed":"13.69 MB","rss":"78.39 MB","timestamp":"2026-01-31T09:00:10.099Z"}
+[32minfo[39m: 📊 Memory Usage: {"external":"3.64 MB","heapTotal":"15.75 MB","heapUsed":"13.69 MB","rss":"71.44 MB","timestamp":"2026-01-31T09:01:10.187Z"}
+[32minfo[39m: 📊 Memory Usage: {"external":"3.64 MB","heapTotal":"15.75 MB","heapUsed":"13.74 MB","rss":"69.94 MB","timestamp":"2026-01-31T09:02:10.291Z"}
+[32minfo[39m: 📊 Memory Usage: {"external":"3.67 MB","heapTotal":"15.75 MB","heapUsed":"14.18 MB","rss":"74.19 MB","timestamp":"2026-01-31T09:03:10.295Z"}
+[32minfo[39m: 📊 Memory Usage: {"external":"3.67 MB","heapTotal":"15.75 MB","heapUsed":"14.20 MB","rss":"61.56 MB","timestamp":"2026-01-31T09:04:10.491Z"}
+[32minfo[39m: 📊 Memory Usage: {"external":"3.67 MB","heapTotal":"15.75 MB","heapUsed":"14.22 MB","rss":"62.31 MB","timestamp":"2026-01-31T09:05:10.503Z"}
+[32minfo[39m: 📊 Memory Usage: {"external":"3.67 MB","heapTotal":"15.75 MB","heapUsed":"14.24 MB","rss":"69.44 MB","timestamp":"2026-01-31T09:06:10.521Z"}
+[32minfo[39m: 📊 Memory Usage: {"external":"3.67 MB","heapTotal":"15.75 MB","heapUsed":"14.27 MB","rss":"69.69 MB","timestamp":"2026-01-31T09:07:10.588Z"}
+[32minfo[39m: 📊 Memory Usage: {"external":"3.67 MB","heapTotal":"15.75 MB","heapUsed":"14.29 MB","rss":"69.81 MB","timestamp":"2026-01-31T09:08:10.608Z"}
+[32minfo[39m: 📊 Memory Usage: {"external":"3.67 MB","heapTotal":"15.75 MB","heapUsed":"14.31 MB","rss":"69.81 MB","timestamp":"2026-01-31T09:09:10.688Z"}
+[32minfo[39m: 📥 GET / from 154.28.229.79 {"ip":"154.28.229.79","method":"GET","path":"/","timestamp":"2026-01-31T09:09:32.783Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36"}
+[32minfo[39m: 📤 GET / 404 (2ms) {"duration":2,"ip":"154.28.229.79","method":"GET","path":"/","statusCode":404,"timestamp":"2026-01-31T09:09:32.785Z"}
+[32minfo[39m: 📥 GET / from 103.4.250.65 {"ip":"103.4.250.65","method":"GET","path":"/","timestamp":"2026-01-31T09:09:32.819Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"}
+[32minfo[39m: 📤 GET / 404 (1ms) {"duration":1,"ip":"103.4.250.65","method":"GET","path":"/","statusCode":404,"timestamp":"2026-01-31T09:09:32.820Z"}
+[32minfo[39m: 📥 GET / from 107.172.195.127 {"ip":"107.172.195.127","method":"GET","path":"/","timestamp":"2026-01-31T09:09:38.716Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"}
+[32minfo[39m: 📤 GET / 404 (0ms) {"duration":0,"ip":"107.172.195.127","method":"GET","path":"/","statusCode":404,"timestamp":"2026-01-31T09:09:38.716Z"}
+[32minfo[39m: 📊 Memory Usage: {"external":"3.68 MB","heapTotal":"16.25 MB","heapUsed":"14.89 MB","rss":"75.56 MB","timestamp":"2026-01-31T09:10:10.716Z"}
+[32minfo[39m: 📥 GET / from 205.169.39.66 {"ip":"205.169.39.66","method":"GET","path":"/","timestamp":"2026-01-31T09:10:53.324Z","userAgent":"Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36"}
+[32minfo[39m: 📤 GET / 404 (1ms) {"duration":1,"ip":"205.169.39.66","method":"GET","path":"/","statusCode":404,"timestamp":"2026-01-31T09:10:53.325Z"}
+[32minfo[39m: 📊 Memory Usage: {"external":"3.68 MB","heapTotal":"17.25 MB","heapUsed":"14.25 MB","rss":"76.69 MB","timestamp":"2026-01-31T09:11:10.728Z"}
+[32minfo[39m: 📥 GET / from 34.118.116.88 {"ip":"34.118.116.88","method":"GET","path":"/","timestamp":"2026-01-31T09:11:57.205Z","userAgent":"Mozilla/5.0 (iPhone13,2; U; CPU iPhone OS 14_0 like Mac OS X) AppleWebKit/602.1.50 (KHTML, like Gecko) Version/10.0 Mobile/15E148 Safari/602.1"}
+[32minfo[39m: 📤 GET / 404 (1ms) {"duration":1,"ip":"34.118.116.88","method":"GET","path":"/","statusCode":404,"timestamp":"2026-01-31T09:11:57.206Z"}
+[32minfo[39m: 📥 GET / from 45.185.226.168 {"ip":"45.185.226.168","method":"GET","path":"/","timestamp":"2026-01-31T09:12:00.631Z","userAgent":"Go-http-client/1.1"}
+[32minfo[39m: 📤 GET / 404 (0ms) {"duration":0,"ip":"45.185.226.168","method":"GET","path":"/","statusCode":404,"timestamp":"2026-01-31T09:12:00.631Z"}
+[32minfo[39m: 📊 Memory Usage: {"external":"3.68 MB","heapTotal":"17.25 MB","heapUsed":"14.51 MB","rss":"76.94 MB","timestamp":"2026-01-31T09:12:10.729Z"}
+[32minfo[39m: 📥 GET / from ::ffff:79.127.175.58 {"ip":"::ffff:79.127.175.58","method":"GET","path":"/","timestamp":"2026-01-31T09:12:26.789Z","userAgent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"}
+[32minfo[39m: 📤 GET / 404 (0ms) {"duration":0,"ip":"::ffff:79.127.175.58","method":"GET","path":"/","statusCode":404,"timestamp":"2026-01-31T09:12:26.789Z"}
+[32minfo[39m: 📥 GET /favicon.ico from ::ffff:79.127.175.58 {"ip":"::ffff:79.127.175.58","method":"GET","path":"/favicon.ico","timestamp":"2026-01-31T09:12:26.986Z","userAgent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"}
+[32minfo[39m: 📤 GET /favicon.ico 404 (1ms) {"duration":1,"ip":"::ffff:79.127.175.58","method":"GET","path":"/favicon.ico","statusCode":404,"timestamp":"2026-01-31T09:12:26.987Z"}
+[32minfo[39m: 📊 Memory Usage: {"external":"3.68 MB","heapTotal":"17.25 MB","heapUsed":"14.89 MB","rss":"77.31 MB","timestamp":"2026-01-31T09:13:10.758Z"}
+[32minfo[39m: 📊 Memory Usage: {"external":"3.68 MB","heapTotal":"17.25 MB","heapUsed":"14.91 MB","rss":"77.31 MB","timestamp":"2026-01-31T09:14:10.789Z"}
+[32minfo[39m: 📊 Memory Usage: {"external":"3.68 MB","heapTotal":"17.25 MB","heapUsed":"14.93 MB","rss":"77.31 MB","timestamp":"2026-01-31T09:15:10.814Z"}
+[32minfo[39m: 📊 Memory Usage: {"external":"3.68 MB","heapTotal":"17.25 MB","heapUsed":"14.95 MB","rss":"77.31 MB","timestamp":"2026-01-31T09:16:10.843Z"}
+[32minfo[39m: 📥 GET / from 54.221.148.110 {"ip":"54.221.148.110","method":"GET","path":"/","timestamp":"2026-01-31T09:17:03.701Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"}
+[32minfo[39m: 📤 GET / 404 (1ms) {"duration":1,"ip":"54.221.148.110","method":"GET","path":"/","statusCode":404,"timestamp":"2026-01-31T09:17:03.702Z"}
+[32minfo[39m: 📊 Memory Usage: {"external":"3.69 MB","heapTotal":"17.25 MB","heapUsed":"15.11 MB","rss":"77.56 MB","timestamp":"2026-01-31T09:17:10.843Z"}
+[32minfo[39m: 📊 Memory Usage: {"external":"3.69 MB","heapTotal":"17.25 MB","heapUsed":"15.13 MB","rss":"77.56 MB","timestamp":"2026-01-31T09:18:10.886Z"}
+[32minfo[39m: 📊 Memory Usage: {"external":"3.69 MB","heapTotal":"17.25 MB","heapUsed":"15.15 MB","rss":"77.56 MB","timestamp":"2026-01-31T09:19:10.896Z"}
+[32minfo[39m: 📊 Memory Usage: {"external":"3.69 MB","heapTotal":"17.25 MB","heapUsed":"15.17 MB","rss":"77.56 MB","timestamp":"2026-01-31T09:20:10.916Z"}
+[32minfo[39m: 📊 Memory Usage: {"external":"3.69 MB","heapTotal":"17.25 MB","heapUsed":"15.18 MB","rss":"77.56 MB","timestamp":"2026-01-31T09:21:10.942Z"}
+[32minfo[39m: 📊 Memory Usage: {"external":"3.69 MB","heapTotal":"16.25 MB","heapUsed":"14.50 MB","rss":"77.69 MB","timestamp":"2026-01-31T09:22:10.949Z"}
+[32minfo[39m: 📊 Memory Usage: {"external":"3.69 MB","heapTotal":"16.25 MB","heapUsed":"14.53 MB","rss":"77.81 MB","timestamp":"2026-01-31T09:23:10.976Z"}
+[32minfo[39m: 📊 Memory Usage: {"external":"3.69 MB","heapTotal":"16.25 MB","heapUsed":"14.55 MB","rss":"77.81 MB","timestamp":"2026-01-31T09:24:10.979Z"}
+[32minfo[39m: 📊 Memory Usage: {"external":"3.69 MB","heapTotal":"16.25 MB","heapUsed":"14.56 MB","rss":"77.81 MB","timestamp":"2026-01-31T09:25:11.003Z"}
+[32minfo[39m: 📊 Memory Usage: {"external":"3.69 MB","heapTotal":"16.25 MB","heapUsed":"14.60 MB","rss":"78.31 MB","timestamp":"2026-01-31T09:26:11.030Z"}
+[32minfo[39m: 📊 Memory Usage: {"external":"3.69 MB","heapTotal":"16.25 MB","heapUsed":"14.62 MB","rss":"78.31 MB","timestamp":"2026-01-31T09:27:11.033Z"}
+[32minfo[39m: 📊 Memory Usage: {"external":"3.69 MB","heapTotal":"16.25 MB","heapUsed":"14.63 MB","rss":"78.31 MB","timestamp":"2026-01-31T09:28:11.044Z"}
+[32minfo[39m: 📊 Memory Usage: {"external":"3.69 MB","heapTotal":"16.25 MB","heapUsed":"14.65 MB","rss":"78.31 MB","timestamp":"2026-01-31T09:29:11.061Z"}
+[32minfo[39m: 📊 Memory Usage: {"external":"3.69 MB","heapTotal":"16.25 MB","heapUsed":"14.67 MB","rss":"78.31 MB","timestamp":"2026-01-31T09:30:11.089Z"}
+[32minfo[39m: 📊 Memory Usage: {"external":"3.69 MB","heapTotal":"16.25 MB","heapUsed":"14.69 MB","rss":"78.31 MB","timestamp":"2026-01-31T09:31:11.111Z"}
+[32minfo[39m: 📊 Memory Usage: {"external":"3.69 MB","heapTotal":"16.25 MB","heapUsed":"14.71 MB","rss":"78.31 MB","timestamp":"2026-01-31T09:32:11.140Z"}
+[32minfo[39m: 📊 Memory Usage: {"external":"3.69 MB","heapTotal":"16.25 MB","heapUsed":"14.73 MB","rss":"78.31 MB","timestamp":"2026-01-31T09:33:11.188Z"}
+[32minfo[39m: 📊 Memory Usage: {"external":"3.69 MB","heapTotal":"16.25 MB","heapUsed":"14.74 MB","rss":"78.31 MB","timestamp":"2026-01-31T09:34:11.193Z"}
+[32minfo[39m: 📊 Memory Usage: {"external":"3.69 MB","heapTotal":"16.25 MB","heapUsed":"14.76 MB","rss":"78.31 MB","timestamp":"2026-01-31T09:35:11.288Z"}
+[32minfo[39m: 📊 Memory Usage: {"external":"3.69 MB","heapTotal":"16.25 MB","heapUsed":"14.78 MB","rss":"78.31 MB","timestamp":"2026-01-31T09:36:11.317Z"}
+[32minfo[39m: 📊 Memory Usage: {"external":"3.69 MB","heapTotal":"16.25 MB","heapUsed":"14.80 MB","rss":"78.31 MB","timestamp":"2026-01-31T09:37:11.346Z"}
+[32minfo[39m: 📊 Memory Usage: {"external":"3.69 MB","heapTotal":"16.25 MB","heapUsed":"14.81 MB","rss":"78.31 MB","timestamp":"2026-01-31T09:38:11.376Z"}
+[32minfo[39m: 📊 Memory Usage: {"external":"3.69 MB","heapTotal":"16.25 MB","heapUsed":"14.83 MB","rss":"78.31 MB","timestamp":"2026-01-31T09:39:11.397Z"}
+[32minfo[39m: 📊 Memory Usage: {"external":"3.69 MB","heapTotal":"16.25 MB","heapUsed":"14.85 MB","rss":"78.31 MB","timestamp":"2026-01-31T09:40:11.414Z"}
+[32minfo[39m: 📊 Memory Usage: {"external":"3.69 MB","heapTotal":"16.25 MB","heapUsed":"14.87 MB","rss":"78.31 MB","timestamp":"2026-01-31T09:41:11.417Z"}
+[32minfo[39m: 📊 Memory Usage: {"external":"3.69 MB","heapTotal":"16.25 MB","heapUsed":"14.89 MB","rss":"78.31 MB","timestamp":"2026-01-31T09:42:11.420Z"}
+[32minfo[39m: 📊 Memory Usage: {"external":"3.69 MB","heapTotal":"16.25 MB","heapUsed":"14.90 MB","rss":"78.31 MB","timestamp":"2026-01-31T09:43:11.444Z"}
+[32minfo[39m: 📊 Memory Usage: {"external":"3.69 MB","heapTotal":"16.25 MB","heapUsed":"14.92 MB","rss":"78.31 MB","timestamp":"2026-01-31T09:44:11.474Z"}

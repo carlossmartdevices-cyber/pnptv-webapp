@@ -1,6 +1,6 @@
 import { describe, expect, it, vi } from 'vitest';
 import type { Request, Response, NextFunction } from 'express';
-import { requireTerms } from './requireTerms';
+import { requireTerms } from './requireTerms.js';
 
 vi.mock('../db/prisma', () => ({
   prisma: {

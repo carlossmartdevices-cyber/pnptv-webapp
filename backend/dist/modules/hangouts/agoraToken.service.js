@@ -1,6 +1,8 @@
-import agoraAccessToken from 'agora-access-token';
-import { env } from '../../env';
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
+const agoraAccessToken = require('agora-access-token');
 const { RtcTokenBuilder, RtcRole } = agoraAccessToken;
+import { env } from '../../env.js';
 export const buildAgoraToken = (channelName, uid) => {
     const ttl = Number(env.AGORA_TOKEN_TTL_SECONDS);
     const expirationTimeInSeconds = Math.floor(Date.now() / 1000) + ttl;
